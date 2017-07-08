@@ -1,6 +1,19 @@
-<%=@alert%>
+<%=@alert if @alert!="none"%>
+
+
+
 <% @records.each do |record|%>
+<br>
+<br>
 <%=record.long_url%>
 <br>
 <%=record.short_url_key%>
 <%end%>
+
+
+<form action="/create" method="post">
+ <input type="text" name="long_url">
+ <input type="submit" value="Submit This Form">
+</form>
+
+

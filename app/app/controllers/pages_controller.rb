@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+    skip_before_filter :verify_authenticity_token  
     def home
         @alert="none"
         @records=Url.all
@@ -14,5 +15,12 @@ class PagesController < ApplicationController
         else
             redirect_to action: 'home', alert: 'Url not found'
         end
+    end
+    def create 
+        @hash=SecureRandom.random_number(36**8).to_s(36).rjust(8, "0")
+        @long_url=params[:long_url]
+        Url.create(long_url: @long_url, short_url_key: @hash)
+        
+        redirect_to action: 'home', hash_key: @hash
     end
 end
