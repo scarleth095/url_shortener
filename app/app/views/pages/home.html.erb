@@ -1,19 +1,55 @@
-<%=@alert if @alert!="none"%>
-
-
-
-<% @records.each do |record|%>
-<br>
-<br>
-<%=record.long_url%>
-<br>
-<%=record.short_url_key%>
+<%if @alert%>
+<div class="alert alert-danger" role="alert"><h4><%=@alert%></h4></div>
 <%end%>
-
-
-<form action="/create" method="post">
- <input type="text" name="long_url">
- <input type="submit" value="Submit This Form">
-</form>
+<style>
+    .title{
+        font-family: 'Pacifico', cursive;
+    }
+    .well{
+        background-color: rgba(154, 227, 198, .7);
+        border-color: rgb(154, 227, 198);
+    }
+    body{
+        background-color: #363937;
+    }
+</style>
+<br>
+<div class="col-lg-1"></div>
+<div class=" col-lg-10">
+    <div class="well">
+        <center>
+            <form action="/create" method="post">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                        <div class="col-lg-6">
+                            <h1 class="title">Enter Url to Shorten</h1>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon" id="basic-addon1">
+                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                </span>
+                                <input class="form-control" type="text" name="long_url" aria-describedby="basic-addon1">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info" type="submit" value="Submit This Form">Shorten</button>
+                                </span>
+                            </div>
+                        </div>
+                     <div class="col-lg-3"></div>
+                </div> 
+            </form>
+            <br>
+            <br>
+        </center>
+    </div>
+    <br>
+    <%if @hash_key%>
+        <div class="well">
+            <center>
+                <p><b>Your new url for: </b> <%=@long_url%></p>
+                <h1><%=@short_url%></h1>
+            </center>
+        </div>
+    <%end%>
+</div>
+<div class="col-lg-1"></div>
 
 
