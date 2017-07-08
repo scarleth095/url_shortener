@@ -1,8 +1,18 @@
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: shortenurl_devolpment
   pool: 5
   username: shortenurl
   password: dragon12
 
+development:
+  <<: *default
+  database: shortenurl_devolpment
+
+test:
+  <<: *default
+  database: shortenurl_test
+
+production:
+  <<: *default
+  database: shortenurl_production
