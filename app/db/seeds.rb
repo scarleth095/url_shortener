@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Url.create(long_url: 'http://scarlethestevez.me/', short_url_key: 'hdk6vv9s')
