@@ -8,3 +8,5 @@
 
 
 Url.create(long_url: 'http://scarlethestevez.me/', short_url_key: 'hdk6vv9s')
+Url.create(long_url: 'https://www.reddit.com/', short_url_key: '9iohgf6t')
+
