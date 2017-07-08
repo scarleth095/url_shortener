@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: scarleth
+  database: shortenurl_devolpment
   pool: 5
   username: shortenurl
   password: dragon12
