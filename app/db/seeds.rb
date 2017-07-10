@@ -7,6 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Url.create(long_url: 'http://scarlethestevez.me/', short_url_key: 'hdk6vv9s')
-Url.create(long_url: 'https://www.reddit.com/', short_url_key: '9iohgf6t')
+Url.create(long_url: 'http://scarlethestevez.me/')
+Url.create(long_url: 'https://www.reddit.com/')
+Url.create(long_url: 'http://facebook.com/')
+Url.create(long_url: 'http://twitter.com/')
+Url.create(long_url: 'http://google.com/')
+Url.create(long_url: 'http://youtube.com/')
+Url.create(long_url: 'http://linkedin.com/')
+Url.create(long_url: 'http://wordpress.org/')
+Url.create(long_url: 'http://instagram.com/')
+Url.create(long_url: 'http://pinterest.com/')
+Url.create(long_url: 'http://wikipedia.org/')
+Url.create(long_url: 'http://apple.com/')
+Url.create(long_url: 'http://tumblr.com/')
+Url.create(long_url: 'http://amazon.com/')
 
